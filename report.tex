@@ -201,11 +201,87 @@ female population. For our research we will use
 these papers nevertheless, we will make sure to use data for both male and female.  
 
 \section{METHODLOGY}
-At this point, We are planning to use python/pandas\cite{pandas} to program, openRefine\cite{openrefine} to clean data, and D3\cite{d3} for visualization.
-This may change when the project evolves. 
-Each member will extract data from topic assigned to them, clean it, and format it. From that point, we analyze the data, get conclusions, and produce the guidelines.  
-Figure \ref{fig:schedule} shows the details on how various tasks are distributed among team members 
-and how the timeline is formed to reach all the deadlines. 
+We have distributed the five factors among the researchers to study the dataset based on the factor they 
+own and to find the relationship between the designated factor and the depression and anxiety.
+Figure \ref{fig:schedule} shows the details on how various tasks with deadline are distributed among team members.
+For the initial data observation, we are using Microsoft Excel, Numpy\cite{numpy}, and opendatanetwork.com\cite{odn}.
+We are planning to use python/pandas\cite{pandas} to program, openRefine\cite{openrefine} to clean 
+data, and D3\cite{d3} to visualize the results.
+
+Our preliminary observation of the BRFSS\cite{brfss} dataset is that, there are two sets of data. 
+A set belongs to years 1995 to 2010 and another set from 2011 to 2017. 
+BRFSS questionnaire 
+changed (or modernized) after 2011. It gathered not only from land line but also from cellphone. 
+Questions where updated to contain more recent related topics such as internet usage. 
+And some territories such as Preto Rico where also included in the list of states (territories) 
+to conduct the questionnaire \cite{brfss}. 
+The combined data is around one gigabyte of unclean data. 
+
+We noticed that BRFSS are questions about the state itself than individuals. 
+Which means that, if a person answered a quesiton that he/she is a smoker, the same person cannot be traced to know
+what was his/her answer for being depressed or not. 
+Instead, the BRFSS is a questionnaire for the state and shows how many people of the sampled population 
+from a particular state are smoker or are depressed. Hence, our conclusion would have similar nature too. 
+
+BRFSS has two sets of questions. The core question and optional one. The core questions are asked by 
+all state participating in the BRFSS program but the optional one is not mandatory on states. Hence, 
+some of the questions that were very interesting and important to our research, were not used in all states. 
+We think that some factors may end up more generalized or tweaked in order to draw some related conclusion
+from the dataset. 
+For example, social media is an important factor but this is not part of BRFSS questionnaire. 
+We did find that the dataset after 2011 does have data on internet usage. We thought we can bring internet 
+usage as a factor that can explicitly expresses social media usage. We have tweaked or generalized these factors:
+Eating disorder to eating vegetable and fruits, social media usage to internet usage, and technology and 
+education to education grade level.
+
+The research got more challenging when we noticed that 
+the depression factor is not called out in the dataset from prior 2011. 
+Depression and anxiety are optional questions and it was not mandatory to ask.
+And, to make the matter worse, anxiety 
+was not mentioned in both datasets. It is also an optional topic for BRFSS. 
+
+Nevertheless, we found out that there are two features that could get us
+some research answers from BRFSS on wheather someone is suffering from mental ilness. 
+One feature is "Overall health score" (calculated by BFRSS based on several survey questions). 
+It gives a percentage estimate of individuals with "good or better" health and "fair or poor" health.
+The other feature is "Perceived Overall health"(this value is based on survey question which directly 
+asks participants if they feel healthy)
+We believe that combination of health score, overal health, and answers to questions on depression will 
+give us a picture of mental health of people of a state. 
+
+\par\noindent\textit{The preliminary data observations}\newline\newline
+As for physical activity, we found data on both datasets. Our initial analysis 
+showed that low physical activity led to low level of overall health and increase of depression. We found similar 
+initial results with respect to alcohol and smoking consumption and overall health status.  
+
+With respect to social media factor, as per the data, we will be finding the relationship between internet vs 
+depression and anxiety. Using the dataset, we can analyze the categories of internet usage based of several 
+factors such as gender, race, income, age and several more. We can see whether there is a direct correlation 
+between internet use and depression and anxiety by comparing the depression rate of those factors. If they are 
+very similar, we can see that internet use is a direct cause of depression and if they are not, there may be 
+other factors that were not accounted for.
+
+Regarding the correlation between education level and the chance of having depression, we picked some state 
+that used the direct quesiton on depression and anxiety in their BRFSS.  
+We examined information such as whether an individual has been informed to have 
+depressive disorder such as depression, major depression, dysthymia, or minor depression, and the level of 
+education one attained. Based on initial analysis, it seems the higher the level of education one completed, 
+the higher the chance of having mental issues. We are going to put extra attention on this factor to understand 
+the nature of this initial results.
+
+As for eating behavior factor, there are clear features to know if the person getting questioned has 
+healthy eating habit or not in both BRFSS datasets. For example, "consume vegtables and fruits five or more times per day".
+The quistionair does not ask if a person is diagnosed with eating disorder. But asks if the person consumes 
+fruits and vegetables through his/her day. Clearly, we can take the answer to this question along with overall health
+result would provide us an indication of wheather a person has eating disorder.
+
+We are still working on the dataset to consolidate our analysis and draw conslusion. 
+
+\section{EVALUATION}
+Work in progress.
+
+\section{CONCLUSION AND DISCUSION}
+Work in progress.
 
 %\includepdf{schedule.pdf}
 \captionsetup[figure]{labelformat=empty}
@@ -224,12 +300,6 @@ and how the timeline is formed to reach all the deadlines.
 \end{figure}
 
 \clearpage 
-
-\section{EVALUATION}
-Work in progress.
-
-\section{CONCLUSION AND DISCUSION}
-Work in progress.
 
 \bibliography{biblio}
 \bibliographystyle{plain}
