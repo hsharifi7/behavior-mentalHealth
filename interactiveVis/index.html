@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.counties {
+    fill: none;
+}
+
+.states {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+    }
+
+h1 {
+    position: relative;
+    top: 10px;
+    left: 300px;
+    text-align: left;
+}
+
+.d3-tip {
+    line-height: 1.6;
+    padding: 12px;
+    background: rgba(8, 20, 128, 0.705);
+    color: #fff;
+    border-radius: 6px;
+    width: 200px;
+    height: 200px;
+}
+
+</style>
+
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script> -->
+
+<script src="/lib/d3.v5.min.js"></script>
+<script src="/lib/d3-scale-chromatic.v1.min.js"></script>
+<script src="/lib/topojson.v2.min.js"></script>
+<script src="/lib/d3-tip.min.js"></script>
+<h1>Choropleth Map of 2013</h1>
+<svg width="960" height="600"></svg>
+
+<script>
+
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+var depressed = d3.map();
+var stateNames = d3.map();
+var edu2 = d3.map();
+var edu3 = d3.map();
+var edu4 = d3.map();
+var edu5 = d3.map();
+var edu6 = d3.map();
+
+var path = d3.geoPath();
+
+
+// below for legend
+var y = d3.scaleLinear()
+        .domain([8, 26])
+        .rangeRound([200, 400]);
+
+var color = d3.scaleThreshold()
+            .domain(d3.range(10, 26, 2))
+            .range(d3.schemeReds[9]);
+
+var g = svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(930,200)");
+
+g.selectAll("rect")
+    .data(color.range().map(function(d) {
+        d = color.invertExtent(d);
+        if (d[0] == null) d[0] = y.domain()[0];
+        if (d[1] == null) d[1] = y.domain()[1];
+        return d;
+        }))
+    .enter().append("rect")
+    .attr("width", 30)
+    .attr("y", function(d) { return y(d[0]); })
+    .attr("height", function(d) { return y(d[1]) - y(d[0]); })
+    .attr("fill", function(d) { return color(d[0]); });
+
+g.append("text")
+    .attr("class", "caption")
+    .attr("y", y.range()[0]-10)
+    .attr("x", -60)
+    .attr("fill", "#000")
+    .attr("text-anchor", "start")
+    .attr("font-weight", "bold")
+    .text("DP Ratio in Survey");
+
+g.call(d3.axisLeft(y)
+    .tickSize(13)
+    .tickFormat(function(x) { 
+        return (x==10)? "<=" + x + "%":(x==24)? ">=" + x + "%":x + "%"; })
+    .tickValues(color.domain()))
+    .select(".domain")
+    .remove();
+
+// above for legend
+
+var promises = [
+    d3.json("us.json"),
+
+    d3.csv("result.csv", function(d) {stateNames.set(d.id, d.name);}),
+    d3.csv("result.csv", function(d) {depressed.set(d.id, +d.value*100);}),
+
+    d3.csv("result.csv", function(d) {edu2.set(d.id, +d.Edu2*100);}),
+    d3.csv("result.csv", function(d) {edu3.set(d.id, +d.Edu3*100);}),
+    d3.csv("result.csv", function(d) {edu4.set(d.id, +d.Edu4*100);}),
+    d3.csv("result.csv", function(d) {edu5.set(d.id, +d.Edu5*100);}),
+    d3.csv("result.csv", function(d) {edu6.set(d.id, +d.Edu6*100);}),
+
+]
+
+Promise.all(promises).then(ready)
+
+function ready([us]) {
+
+    var tip = d3.tip().attr('class', 'd3-tip').direction('e').offset([-30, 30]);
+
+    svg.append("g")
+        .attr("class", "counties")
+        .selectAll("path")
+        .data(topojson.feature(us, us.objects.states).features)
+        .enter().append("path")
+        .attr("fill", function(d) { return color(d.value = depressed.get(+d.id)); })
+        .attr("d", path)
+        .call(tip.html(function(d) { 
+                d.State = stateNames.get(+d.id);
+                d.Dratio = depressed.get(+d.id);
+                d.Edu2 = edu2.get(+d.id);
+                d.Edu3 = edu3.get(+d.id);
+                d.Edu4 = edu4.get(+d.id);
+                d.Edu5 = edu5.get(+d.id);
+                d.Edu6 = edu6.get(+d.id);
+
+                return "<div>" + "State: " + d.State + "</div>" +
+                        "<div>" + "Depression ratio: " + d.Dratio.toFixed(2) + "%</div>" +
+                        "<div>" + "Grades 1~8: " + d.Edu2.toFixed(2) + "%</div>" +
+                        "<div>" + "Grades 9~11: " + d.Edu3.toFixed(2) + "%</div>" +
+                        "<div>" + "Grade 12/GED: " + d.Edu4.toFixed(2) + "%</div>" +
+                        "<div>" + "College 1~3 years: " + d.Edu5.toFixed(2) + "%</div>" +
+                        "<div>" + "College >=4 years: " + d.Edu6.toFixed(2) + "%</div>";
+
+            }))
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
+
+    svg.append("path")
+        .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+        .attr("class", "states")
+        .attr("d", path);
+}
+
+</script>
