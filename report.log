@@ -1,21 +1,21 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.17)  20 APR 2019 07:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.23)  20 APR 2019 07:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/hadi/Desktop/final-report/report.tex
-(/home/hadi/Desktop/final-report/report.tex
-LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/home/hadi/Desktop/final-report/ieeeconf.cls
+**/Users/hadisharifi/Documents/CSE6242/Project/final-report/report
+(/Users/hadisharifi/Documents/CSE6242/Project/final-report/report.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 22 language(s) loaded.
+(./ieeeconf.cls
 Document Class: ieeeconf 2004/1/15 revision V1.6b by Pradeep Misra
 \@IEEEtrantmpdimenA=\dimen102
 \@IEEEtrantmpdimenB=\dimen103
-\@IEEEtrantmpcountA=\count79
-\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountA=\count80
+\@IEEEtrantmpcountB=\count81
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 792.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \@IEEEnormalsizefontbaselineskip=\skip41
@@ -72,59 +72,59 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEiednormlabelsep=\dimen110
 \IEEEiedmathlabelsep=\dimen111
 \IEEEiedtopsep=\skip44
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@IEEEsubequation=\count85
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
 \abovecaptionskip=\skip45
 \belowcaptionskip=\skip46
-\c@figure=\count86
-\c@table=\count87
-\@IEEEeqnnumcols=\count88
-\@IEEEeqncolcnt=\count89
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
 \@IEEEtmpitemindent=\dimen112
-\c@biography=\count90
+\c@biography=\count91
 \@IEEEtranrubishbin=\box26
 )
 ** ATTENTION: Overriding command lockouts (line 10).
 ** ATTENTION: Overriding IEEE standard margins (line 13).
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
- (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count91
-\calc@Bcount=\count92
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count92
+\calc@Bcount=\count93
 \calc@Adimen=\dimen113
 \calc@Bdimen=\dimen114
 \calc@Askip=\skip47
 \calc@Bskip=\skip48
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count93
+\calc@Ccount=\count94
 \calc@Cskip=\skip49
-) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
- (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+) (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+) (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+)) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
-) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -136,13 +136,13 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+)) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
@@ -152,17 +152,17 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \AM@pagewidth=\dimen117
 \AM@pageheight=\dimen118
- (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box27
 \AM@global@opts=\toks16
 \AM@toc@title=\toks17
-\c@AM@survey=\count94
+\c@AM@survey=\count95
 \AM@templatesizebox=\box28
-) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
- (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen119
@@ -181,73 +181,70 @@ Package caption Warning: Unsupported document class (or package) detected,
 See the caption package documentation for explanation.
 
 Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \begin {center}{\footnotesize #1}\\{\footnotesize \scshape #2}\end {center}\@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\footnotesize #1.~~ #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\footnotesize #1.~~ }\parbox [t]{\hsize }{\footnotesize \noindent \unhbox \@tempboxa #2}\else \ifcenterfigcaptions \hbox to\hsize {\footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\footnotesize \box \@tempboxa \hfil }\fi \fi \fi .
-\c@ContinuedFloat=\count95
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+\c@ContinuedFloat=\count96
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count96
+\c@r@tfl@t=\count97
 \rotFPtop=\skip50
 \rotFPbot=\skip51
 \rot@float@box=\box29
 \rot@mess@toks=\toks18
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
 \col@sep=\dimen126
+\ar@mcellbox=\box30
 \extrarowheight=\dimen127
 \NC@list=\toks19
 \extratabsurround=\skip52
 \backup@length=\skip53
-) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
-Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
- (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+\ar@cellbox=\box31
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
- (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2018basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks20
 \XKV@tempa@toks=\toks21
 )
-\XKV@depth=\count97
+\XKV@depth=\count98
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+)) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
-) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
-Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
- (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box30
+\collectedbox=\box32
 )
 \tc@llx=\dimen128
 \tc@lly=\dimen129
 \tc@urx=\dimen130
 \tc@ury=\dimen131
 Package trimclip Info: Using driver 'tc-pdftex.def'.
- (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
-File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen132
 \adjbox@Height=\dimen133
 \adjbox@Depth=\dimen134
 \adjbox@Totalheight=\dimen135
- (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count98
-) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box31
-\sift@deathcycles=\count99
-\@vwid@loff=\dimen136
-\@vwid@roff=\dimen137
-)) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+\adjbox@pwidth=\dimen136
+\adjbox@pheight=\dimen137
+\adjbox@pdepth=\dimen138
+\adjbox@ptotalheight=\dimen139
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 105.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-)) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+)) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/home/hadi/Desktop/final-report/report.aux
+) (./report.aux
 
 LaTeX Warning: Label `fig:featureImportance' multiply defined.
 
@@ -306,33 +303,33 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 50.
-\AtBeginShipoutBox=\box32
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+\AtBeginShipoutBox=\box33
+ (/usr/local/texlive/2018basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count100
-\scratchdimen=\dimen138
-\scratchbox=\box33
-\nofMPsegments=\count101
-\nofMParguments=\count102
+\scratchcounter=\count99
+\scratchdimen=\dimen140
+\scratchbox=\box34
+\nofMPsegments=\count100
+\nofMParguments=\count101
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count103
-\MPscratchDim=\dimen139
-\MPnumerator=\count104
-\makeMPintoPDFobject=\count105
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen141
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks23
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-)) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -340,8 +337,8 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-))) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO)
+))) (/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -351,15 +348,15 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
- (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+)) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
- (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 Package caption Info: Begin \AtBeginDocument code.
@@ -372,7 +369,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2018basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
@@ -406,21 +403,21 @@ File: Yuqing.pdf Graphic file (type pdf)
 <use Yuqing.pdf>
 Package pdftex.def Info: Yuqing.pdf  used on input line 427.
 (pdftex.def)             Requested size: 245.71811pt x 163.8113pt.
- [3 </home/hadi/Desktop/final-report/hadi.pdf> </home/hadi/Desktop/final-report/Quang.pdf
+ [3 <./hadi.pdf> <./Quang.pdf
 
-pdfTeX warning: pdflatex (file /home/hadi/Desktop/final-report/Quang.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> </home/hadi/Desktop/final-report/karthik.pdf
+pdfTeX warning: pdflatex (file ./Quang.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./karthik.pdf
 
-pdfTeX warning: pdflatex (file /home/hadi/Desktop/final-report/karthik.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> </home/hadi/Desktop/final-report/Reza.pdf
+pdfTeX warning: pdflatex (file ./karthik.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Reza.pdf
 
-pdfTeX warning: pdflatex (file /home/hadi/Desktop/final-report/Reza.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./Reza.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<featureImportance2.pdf, id=161, 361.35pt x 361.35pt>
+<featureImportance2.pdf, id=161, 367.3819pt x 321.24393pt>
 File: featureImportance2.pdf Graphic file (type pdf)
 <use featureImportance2.pdf>
 Package pdftex.def Info: featureImportance2.pdf  used on input line 455.
-(pdftex.def)             Requested size: 245.71811pt x 245.72026pt.
+(pdftex.def)             Requested size: 245.71811pt x 214.85977pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -429,12 +426,12 @@ File: ROC.pdf Graphic file (type pdf)
 <use ROC.pdf>
 Package pdftex.def Info: ROC.pdf  used on input line 471.
 (pdftex.def)             Requested size: 245.71811pt x 245.72026pt.
- [4 </home/hadi/Desktop/final-report/Yuqing.pdf> </home/hadi/Desktop/final-report/featureImportance2.pdf
+ [4 <./Yuqing.pdf> <./featureImportance2.pdf
 
-pdfTeX warning: pdflatex (file /home/hadi/Desktop/final-report/featureImportance2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> </home/hadi/Desktop/final-report/ROC.pdf
+pdfTeX warning: pdflatex (file ./featureImportance2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./ROC.pdf
 
-pdfTeX warning: pdflatex (file /home/hadi/Desktop/final-report/ROC.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./ROC.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [5
 
 ]
@@ -471,7 +468,7 @@ Package pdftex.def Info: Project_features-rotated.pdf , page1 used on input line
  [6
 
 
- </home/hadi/Desktop/final-report/Project_features-rotated.pdf, page is rotated 270 degrees>]
+ <./Project_features-rotated.pdf, page is rotated 270 degrees>]
 <map-rotated.pdf, id=303, 614.295pt x 794.97pt>
 File: map-rotated.pdf Graphic file (type pdf)
 <use map-rotated.pdf>
@@ -506,7 +503,7 @@ Package pdftex.def Info: map-rotated.pdf , page1 used on input line 532.
 
 
 
- </home/hadi/Desktop/final-report/map-rotated.pdf, page is rotated 270 degrees>]
+ <./map-rotated.pdf, page is rotated 270 degrees>]
 <schedule.pdf, id=333, 614.295pt x 1011.78pt>
 File: schedule.pdf Graphic file (type pdf)
 <use schedule.pdf>
@@ -541,9 +538,9 @@ Package pdftex.def Info: schedule.pdf , page1 used on input line 549.
 
 
 
- </home/hadi/Desktop/final-report/schedule.pdf, page is rotated 270 degrees>] (/home/hadi/Desktop/final-report/report.bbl
+ <./schedule.pdf, page is rotated 270 degrees>] (./report.bbl
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
@@ -595,21 +592,21 @@ Before submitting the final camera ready copy, remember to:
 
 [9
 
- </home/hadi/Desktop/final-report/wordcount.png>] (/home/hadi/Desktop/final-report/report.aux)
+ <./wordcount.png>] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5746 strings out of 492982
- 89416 string characters out of 6134896
- 164666 words of memory out of 5000000
- 9189 multiletter control sequences out of 15000+600000
+ 5946 strings out of 494091
+ 93932 string characters out of 6163523
+ 171225 words of memory out of 5000000
+ 9505 multiletter control sequences out of 15000+600000
  108945 words of font info for 112 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 41i,18n,77p,305b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/hadi/Desktop/final-report/report.pdf (9 pages, 454791 bytes).
+ 319 hyphenation exceptions out of 8191
+ 41i,18n,77p,327b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018basic/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (9 pages, 454674 bytes).
 PDF statistics:
  403 PDF objects out of 1000 (max. 8388607)
  131 compressed objects within 2 object streams
