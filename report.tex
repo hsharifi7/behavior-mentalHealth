@@ -78,9 +78,10 @@ Undeniably, these are two major risks for human life.
 This research analyzes data from the Behavioral Risk Factor Surveillance System (BRFSS)\cite{brfss} for eleven years. 
 It shows how these six behavior factors (physical activity, eating disorder, 
 smoking, drinking alcohol, social media, and education/technology) are correlated to mental health (mainly depression and anxiety). It shows
-this relationship in an interactive visualization. It also analyzes the data and creates a model for predicting the possibility of 
-having a mental health based on input on six factors. The research provides a more enhanced model by tuning and add/remove features. 
-It proposes guidelines that could lead to reduction of depression and anxiety in the society. 
+this relationship in an interactive visualization. It also analyzes the data and creates statistical models for predicting the possibility of 
+having a mental health based on input on six factors. The research provides more enhanced models by tuning and add/remove features using
+advanced techniques such as PCA and feature importance score. 
+ 
 
 % \section{OBJECTIVE}
 
@@ -148,7 +149,6 @@ It proposes guidelines that could lead to reduction of depression and anxiety in
 % to avoid mental health. The research gradually achieved all the above. Refer to Fig \ref{fig:schedule}.
 % }
 
-\setlength{\parskip}{.5em} %stop giving space
 \section{LITERATURE REVIEW}
 
 \par\noindent\textit{$\circ$ The effects of physical activity?}\newline
@@ -208,7 +208,7 @@ In the survey of this research, we noticed that almost all researches on mental 
 number of factors. This research picked the most dominant human behaviors (smoking, drinking, eating, physical activity, 
 education/knowledge, and social media/internet) at the current day and age and finds a relationship between 
 them and mental health (depression and anxiety). The novelty of this work is that it not only picked more behavioral 
-factors but it also used the state of art machine learning (ML) and deep learning (DL) algorithm to provide a statistical model for predicting 
+factors but it also used the state of art machine learning (ML) and deep learning (DL) algorithm to provide statistical models for predicting 
 the possibility of having or getting mental disease. The results are not only shown in a traditional statistical 
 figures and charts but also in a delicate graphic visualization that 
 is interactive. The interactive visualization summarizes the results of the analysis in a very friendly, easy to use graphical model.
@@ -217,30 +217,30 @@ is interactive. The interactive visualization summarizes the results of the anal
 education/knowledge, and social media/internet factors has direct effect on the mental health. They could deteriorate or
 enhance the mental health.}
 
-\par\noindent\textit{$\circ$ The dataset BRFSS}\newline
-"The Behavioral Risk Factor Surveillance System (BRFSS) is the nation's premier system of health-related 
+\par\noindent\textit{$\circ$ The conducted research and the analytics}\newline
+We used dat from The Behavioral Risk Factor Surveillance System (BRFSS) \cite{brfss}.
+BRFSS is "the nation's premier system of health-related 
 telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, 
 chronic health conditions, and use of preventive services"\cite{brfss}.
 
-Our preliminary observation of the BRFSS\cite{brfss} dataset is that, there are two sets of data. 
-A set belongs to years 1995 to 2010 and another set from 2011 to 2017. 
-BRFSS questionnaire 
-changed (or modernized) after 2011.  
-Questions where updated to contain more recent related topics such as internet usage.  
+% Our preliminary observation of the BRFSS\cite{brfss} dataset is that, there are two sets of data. 
+% A set belongs to years 1995 to 2010 and another set from 2011 to 2017. 
+% BRFSS questionnaire 
+% changed (or modernized) after 2011.  
+% Questions where updated to contain more recent related topics such as internet usage.  
 
-BRFSS has core questions and optional ones. The core questions are asked by 
-all state participating in the BRFSS program but the optional ones are not mandatory on states. Hence, 
-some of the questions that were very interesting and important to our research, were not used in all states. 
-This was one challenge to overcome in this research. 
+% BRFSS has core questions and optional ones. The core questions are asked by 
+% all state participating in the BRFSS program but the optional ones are not mandatory on states. Hence, 
+% some of the questions that were very interesting and important to our research, were not used in all states. 
+% This was one challenge to overcome in this research. 
 
-As an example, social media is not part of BRFSS questionnaire. 
-We did find that the dataset after 2011 have data on internet usage. Internet 
-usage can be used as a factor that implies social media usage. 
-We end up tweaking and in some cases generalizing few factors. The factors affected by this approach are:
-Eating disorder to eating vegetable and fruits, social media usage to internet usage, and technology and 
-education to education grade level.
+% As an example, social media is not part of BRFSS questionnaire. 
+% We did find that the dataset after 2011 have data on internet usage. Internet 
+% usage can be used as a factor that implies social media usage. 
+% We end up tweaking and in some cases generalizing few factors. The factors affected by this approach are:
+% Eating disorder to eating vegetable and fruits, social media usage to internet usage, and technology and 
+% education to education grade level.
 
-\par\noindent\textit{$\circ$ The conducted research and the analytics}\newline
 We have used 11 years of BRFSS data (3GB from 2007 to 2017). We obtain the data in
 SAS \cite{sas} XPT format and we converted it to SQLite \cite{sqlite} tables.This tremendously was helpful 
 in extracting the factors we needed for our research. SQL language was familiar to all the research conductors 
@@ -261,7 +261,7 @@ feel and see the effect of each factor on various stats and territories. The lin
 We brought more innovation and novelty to the table by using ML and DL to provide analytical models to predict the possibility of 
 getting (or having) mental health. Currently our accuracy at its best is 72\% and we understand that it is not very high but 
 for the short time of the life of this project, this is a great achievement.
-We need more time to optimize our model(s) and increase the accuracy. We consider that a future work for this 
+We need more time to optimize our models and increase the accuracy. We consider that a future work for this 
 research.\footnote{Our experience in big corporation show that, some models takes 5 to 7 weeks of full time work to get to an accuracy of 80\%.}
 
 At the start of our analysis journey, 
@@ -283,9 +283,9 @@ our deep learning model.
 
 \par\noindent\textit{$\circ$ Distribution of work}\newline
 All these tasks are distributed among all the researchers of this paper. Each of us owned a factor, extract it and cleaned for the
-analysis. The statistical analysis and ML model build was done by each member and results reported and generated separately. 
+analysis. The statistical analysis and ML model analysis was done by each member and results reported and generated separately. 
 Different members took some tasks to consolidate the research work. Tasks such as conversion to SQLite, consolidating all visualization 
-into one, optimizing the ML model(s), and writing the reports and proof writing them. For more details on how tasks were distributed, please 
+into one, optimizing the ML models, and writing the reports and proof writing them. For more details on how tasks were distributed, please 
 refer to \ref{fig:schedule}.
 
 % %%%%
@@ -366,6 +366,7 @@ refer to \ref{fig:schedule}.
 
 % We are still working on the dataset to consolidate our analysis and draw conclusion. 
 
+\setlength{\parskip}{.5em} %stop giving space
 \section{EVALUATION}
 After cleaning up the data and consolidating it into one place (SQLite database), we evaluated 
 our hypothesis based on the data we collected. With respect to smoking and drinking alcohol, 
@@ -441,20 +442,46 @@ using the visual choropleth map. Users can visually notice which states reported
 hovering the mouse over that state, get the status of picked factor in form of pop up. The visualization is written in D3 \cite{d3} 
 and it is portable across all operating systems. The visualization can be publicly reached online \cite{visualization}.
 
-As part of this research, we examined multiple machine learning models to create a predictive model that by feeding the six factors,
-it predicts the possibility of getting mental health. 
+As part of this research, we examined multiple machine learning models to create predictive models for predicting mental health. 
 We evaluated six ML models, and examined multiple DL model layer setups.
-The accuracy of our model(s) were very low at the beginning. Using hyper-parameters option from scikit-learn \cite{scikit} package, we managed to 
-increase the accuracy to 69\%. We tried to use DL models for classifications using Keras \cite{keras} DL programming language. 
+The accuracy of our models were very low at the beginning. Using hyper-parameters option from scikit-learn \cite{scikit} package, we managed to 
+increase the accuracy to 69\%. We also to used DL models for classifications using Keras \cite{keras}. 
 Though DL techniques are used in image recognition,
-we build a DL classification model and after hours of trainings and model setup modification, we yet got 68\%.
+we build a DL classification model and after hours of trainings and neuron layers and density modification, we yet got 68\%.
 
-To enhance our model, we took our research one step up and re-evaluated features we were using for our model. 
-We dropped some features and added features. We managed to get the accuracy of our model to 72%.
-At the end, Random Forest classifier performed the best for our analysis. Fig \ref{fig:project-features} shows the features used for our optimized model. 
+
+\begin{figure}[!htb]
+        \center{\includegraphics[width=\linewidth]
+        {featureImportance2.pdf}}
+        \caption{\label{fig:featureImportance} Feature importance.}
+\end{figure}
+
+To enhance our analysis, we took our research one step up and re-evaluated features we used in our analysis.
+We only focused on Random Forest, Gradient Boosting, and Deep Learning models. 
+We added features such as income, general health, details on education, BMI, and few others into 
+our model and evaluated the importance of these features. We dropped features that was not present in all years between 2007 and 2017.
+We used MinMax to normalize our features and get them between 0 and 1. 
+We took logarithm on some feature (such as BMI) to confine their value to 0 and 1.
+We applied PCA using the first 24 principle components to capture 97\% variance and to reduce dimensionality of our model for training speedup.
+The result of this effort was that the accuracy of our model for both Random Forest and Gradient Boosting increased to 72\%.
+Our DL model with the new feature selected, also produced a model with accuracy 72\%. 
+
+\begin{figure}[!htb]
+        \center{\includegraphics[width=\linewidth]
+        {ROC.pdf}}
+        \caption{\label{fig:featureImportance} Probability Curve (ROC).}
+\end{figure}
+
+Fig \ref{fig:featureImportance} shows feature importance score (between 0 to 0.5) of our models. 
+In this figure, the higher a feature score, the more effective a feature is to the model. 
+Fig \ref{fig:project-features} shows more details on the features we used for our models. 
+The ROC (Receiver Operating Characteristics) curve for train and test data set shows that 
+The test AUC (Area Under The Curve) is higher than the train AUC (0.75 vs 0.74) which 
+could indicate an underfitting problem. Clearly there is a room for feature selection improvement. 
+
+
 We are not pleases with this accuracy but not disappointed either. We are planning to put more time and effort
-as a follow up to this research to increase the accuracy to above 90\%.  
-
+as a follow up on this research to increase the accuracy to above 90\%.  
 
 
 \section{CONCLUSION AND DISCUSSION}
