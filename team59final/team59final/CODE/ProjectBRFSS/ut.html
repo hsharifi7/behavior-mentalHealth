@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <style>
+        .counties {
+            fill: none;
+        }
+
+        .states {
+            fill: none;
+            stroke: #fff;
+            stroke-linejoin: round;
+        }
+
+        div.tooltip {
+            position: absolute;
+            text-align: left;
+            width: 230px;
+            height: 70px;
+            padding: 2px;
+            font: 12px sans-serif;
+            color: white;
+            background: darkslateblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        #my_centered_buttons {
+            display: flex; justify-content: center;
+        }
+
+        #mainSVG {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="label1" align="center"> Choropleth Map of Mental Health Sample Population Data 2017 </h1>
+</body>
+
+
+<svg id=mainSVG align="center" width="1060" height="600"></svg>
+<script src="../ProjectBRFSS/lib/d3.v5.min.js"></script>
+<script src="../ProjectBRFSS/lib/d3-scale-chromatic.v1.min.js"></script>
+<script src="../ProjectBRFSS/lib/d3-tip.min.js"></script>
+<script src="../ProjectBRFSS/lib/topojson.v2.min.js"></script>
+<script>
+
+    var brfss2017 = d3.map();
+    var brfss2016 = d3.map();
+    var brfss2015 = d3.map();
+    var brfss2014 = d3.map();
+    var brfss2013 = d3.map();
+
+    var brfssSelected = brfss2017;
+    var theUSInfo = null;
+
+
+    var promises = [
+        d3.json("us.json"),
+        d3.csv("../ProjectBRFSS/pdata_raza.csv", function (d) {
+            if (d.year == '2017') brfss2017.set(+d.FIPS, [d.Name, +d.p_have_mentalhealth, +d.p_have_no_mentalhealth, +d.p_no_internet, +d.p_internet, +d.year])
+            if (d.year == '2016') brfss2016.set(+d.FIPS, [d.Name, +d.p_have_mentalhealth, +d.p_have_no_mentalhealth, +d.p_no_internet, +d.p_internet, +d.year])
+            if (d.year == '2015') brfss2015.set(+d.FIPS, [d.Name, +d.p_have_mentalhealth, +d.p_have_no_mentalhealth, +d.p_no_internet, +d.p_internet, +d.year])
+            if (d.year == '2014') brfss2014.set(+d.FIPS, [d.Name, +d.p_have_mentalhealth, +d.p_have_no_mentalhealth, +d.p_no_internet, +d.p_internet, +d.year])
+            if (d.year == '2013') brfss2013.set(+d.FIPS, [d.Name, +d.p_have_mentalhealth, +d.p_have_no_mentalhealth, +d.p_no_internet, +d.p_internet, +d.year])
+        })
+    ]
+
+    Promise.all(promises).then(ready)
+
+    function ready([us]) {
+        if (theUSInfo == null) theUSInfo = us;
+        tempExtent = d3.extent(d3.entries(brfssSelected).map(function (d) { return Math.round(100 * d.value[1]) }))
+        //console.log(tempExtent)
+        //console.log(brfssSelected)
+        // Define the div for the tooltip
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+        var svg = d3.select("svg"),
+            width = +svg.attr("width"),
+            height = +svg.attr("height");
+
+        var path = d3.geoPath();
+
+        var y = d3.scaleLinear()
+            .domain(d3.range(tempExtent[0], tempExtent[1]))
+            .rangeRound([0, 30]);
+
+        var color = d3.scaleQuantile()
+            .domain(d3.range(tempExtent[0], tempExtent[1]))
+            .range(d3.schemeOranges[9]);
+
+        var g = svg.append("g")
+            .attr("class", "key")
+            .attr("transform", "translate(1000,40)");
+
+        g.selectAll("rect")
+            .data(color.domain())
+            .enter().append("rect")
+            .attr("width", 25)
+            .attr("x", -40)
+            .attr("y", function (d) { return y(d) - 15; })
+            .attr("height", function (d) { return 30; })
+            .attr("fill", function (d) { return color(d); });
+
+        g.append("text")
+            .attr("class", "caption")
+            .attr("y", y.range()[0] - 30)
+            .attr("x", -90)
+            .attr("fill", "#000")
+            .attr("text-anchor", "start")
+            .attr("font-weight", "bold")
+            .text("Mental Health Disorder Rate");
+
+        g.call(d3.axisRight(y)
+            .tickSize("")
+            .tickFormat(function (y, i) {
+                //console.log(color.domain())
+                return y + "%";
+            })
+            .tickValues(color.domain()))
+            .select(".domain")
+            .remove();
+
+        ///this part is for the map-------------------------
+        svg.append("g")
+            .attr("class", "counties")
+            .selectAll("path")
+            .data(topojson.feature(theUSInfo, theUSInfo.objects.states).features)
+            .enter().append("path")
+            .attr("fill", function (d) {
+                index = parseInt(d.id)
+                return color(Math.round(100 * (brfssSelected.get(index)[1])));
+            })
+            .attr("d", path)
+            //.append("title")
+            //.text(function (d) { return d.rate + "%"; })
+            .on("mouseover", function (d) {
+                index = parseInt(d.id)
+
+                div.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                div.html("<center><b>" + brfssSelected.get(index)[0] + "</b></center>" +
+                    "Percentage of the sampled population" + "</br>" +
+                    "&nbsp;&nbsp; Have mental issues: <b>" + Math.round(100 * (brfssSelected.get(index)[1])) + "%</b><br/>" +
+                    "&nbsp;&nbsp; Use internet regularly: <b>" + Math.round(100 * (brfssSelected.get(index)[4])) + "%</b><br/>" )
+                    .style("left", (d3.event.pageX - 10) + "px")
+                    .style("top", (d3.event.pageY - 80) + "px");
+            })
+            .on("mouseout", function (d) {
+                div.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            });
+
+        // svg.append("path")
+        //     .datum(topojson.mesh(theUSInfo, theUSInfo.objects.states, function (a, b) { return a !== b; }))
+        //     .attr("class", "states")
+        //     .attr("d", path)
+        //     ;
+    }
+    function eventHandler() {
+        var x = document.getElementById("years").value;
+        if (x == "2017") brfssSelected = brfss2017
+        else if (x == "2016") brfssSelected = brfss2016
+        else if (x == "2015") brfssSelected = brfss2015
+        else if (x == "2014") brfssSelected = brfss2014
+        else if (x == "2013") brfssSelected = brfss2013
+
+        d3.selectAll("svg > *").remove();
+        ready([theUSInfo])
+        document.getElementById("label1").innerHTML = "Choropleth Map of Mental Health Sample Population Data " + x;
+    }
+
+    function changePage() {
+        var x = document.getElementById("pageChange").value;
+        location.href = x;
+    }
+
+</script>
+
+
+<div id="my_centered_buttons">
+    <select id="years" onchange="eventHandler()">
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+    </select>
+
+    <select id="pageChange" onchange="changePage()">
+        <option value="index.html">Alcohol Consumption & Smoking</option>
+        <option value="ed.html" >Eating Fruits and Vegetables</option>
+        <option value="pa.html" >Exercise / Physical activity</option>
+        <option value="el.html" >Education Level</option>
+        <option value="ut.html" selected>Using Technology</option>
+
+    </select>
+</div>
+
+
+</html>
